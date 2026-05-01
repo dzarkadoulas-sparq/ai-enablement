@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code local settings (project-level overrides are fine to commit; user-level are not)
+.claude/settings.local.json
+
+# Secret / credential files (secrets-patterns.md)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+*secrets*
+*credentials*
+
+# Logs and temp
+*.log
+*.tmp
