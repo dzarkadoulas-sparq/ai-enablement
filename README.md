@@ -4,6 +4,16 @@ This repository helps software developers and teams get the most from **AI codin
 
 The materials assume you will connect assistants to your toolchain using the **Model Context Protocol (MCP)** so the agent can work with Git hosting, work tracking, chat, browsers, and API tools—not only local files and the terminal.
 
+_This repository ships no code, only templates you copy into your project._
+
+## New to AI coding assistants? Start here
+
+1. **Pick your stack** — find your project type in the table below (React, .NET, Python, etc.).
+2. **Copy the matching `claude.md/<stack>/CLAUDE.md`** into your project root — this gives the assistant instant context about your codebase.
+3. **Try a command** — paste any file from `commands/<stack>/` into the chat (e.g. `pre-pr.md` before opening a pull request).
+4. **Level up with skills** — read [`skills/README.md`](skills/README.md) to learn which skills fit your day-to-day tasks and how to install them.
+5. **Go deeper** — work through the `modules/` lessons in order; Module 1 (prompting) and Module 2 (agentic workflows) are the best starting points.
+
 ---
 
 ## Repository layout
