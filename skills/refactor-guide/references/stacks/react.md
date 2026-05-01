@@ -2,7 +2,7 @@
 
 ## Verify after each phase
 
-- `pnpm lint`, `pnpm typecheck`, `pnpm test` (or scripts from `package.json` / `claude.md/react/CLAUDE.md`).
+- `pnpm lint`, `pnpm typecheck`, `pnpm test` (or scripts from `package.json` / `templates/react/CLAUDE.md`).
 
 ## Refactor-specific notes
 

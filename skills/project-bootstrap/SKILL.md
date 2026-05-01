@@ -26,15 +26,15 @@ For **Cursor**, the same content can live in **`.cursorrules`** at the project r
 3. **Read** `references/architecture-patterns.md` for cross-cutting patterns and red flags.
 4. If detection is **ambiguous** (e.g. monorepo with both Next and an API package), ask one short question or document both packages separately in one `CLAUDE.md` with a **Monorepo** top section.
 
-| `<id>`            | Detection signals (examples) |
-| ----------------- | ---------------------------- |
+| `<id>`            | Detection signals (examples)                                                 |
+| ----------------- | ---------------------------------------------------------------------------- |
 | `react`           | Vite + React; `index.html` at root; `vite.config.*`; often no `next` in deps |
-| `next`            | `next` dependency; `app/` or `pages/`; `next.config.*` |
-| `angular`         | `@angular/core`; `angular.json` |
-| `node-express`    | `express` + Node API; `src/index.ts` / `server.ts`; not Next |
-| `python-fastapi`  | `fastapi`, `uvicorn` in `pyproject.toml` or requirements |
-| `java-springboot` | `spring-boot-starter-*` in Gradle/Maven; `@SpringBootApplication` |
-| `dotnet`          | `.sln`, `Microsoft.NET.Sdk`, ASP.NET Core host project |
+| `next`            | `next` dependency; `app/` or `pages/`; `next.config.*`                       |
+| `angular`         | `@angular/core`; `angular.json`                                              |
+| `node-express`    | `express` + Node API; `src/index.ts` / `server.ts`; not Next                 |
+| `python-fastapi`  | `fastapi`, `uvicorn` in `pyproject.toml` or requirements                     |
+| `java-springboot` | `spring-boot-starter-*` in Gradle/Maven; `@SpringBootApplication`            |
+| `dotnet`          | `.sln`, `Microsoft.NET.Sdk`, ASP.NET Core host project                       |
 
 ## Workflow (execute in order)
 
@@ -49,7 +49,7 @@ For **Cursor**, the same content can live in **`.cursorrules`** at the project r
 
 ## Exemplar shapes (ai-enablement)
 
-If this repo is **ai-enablement**, each stack has a full exemplar at `claude.md/<id>/CLAUDE.md`. When generating for **other** repos, treat those exemplars as **structural** guides only; replace with this repo’s actual tools and paths.
+If this repo is **ai-enablement**, each stack has a full exemplar at `templates/<id>/CLAUDE.md`. When generating for **other** repos, treat those exemplars as **structural** guides only; replace with this repo’s actual tools and paths.
 
 ## Anti-patterns
 

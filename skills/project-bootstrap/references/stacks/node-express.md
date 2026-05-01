@@ -32,4 +32,4 @@ HTTP: mount order in `app` → **router** → **controller** → **service** →
 
 ## Exemplar (ai-enablement)
 
-`claude.md/node-express/CLAUDE.md`
+`templates/node-express/CLAUDE.md`

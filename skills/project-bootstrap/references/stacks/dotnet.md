@@ -33,4 +33,4 @@ Minimal API or `Controller` → **MediatR** handler (if used) or service → `Db
 
 ## Exemplar (ai-enablement)
 
-`claude.md/dotnet/CLAUDE.md`
+`templates/dotnet/CLAUDE.md`

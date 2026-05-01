@@ -21,4 +21,4 @@
 
 ## Exemplar context
 
-`claude.md/node-express/CLAUDE.md`
+`templates/node-express/CLAUDE.md`

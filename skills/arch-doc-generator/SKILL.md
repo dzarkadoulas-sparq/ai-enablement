@@ -59,4 +59,4 @@ From **read-only** analysis of the codebase (and **existing** OpenAPI/GraphQL/sc
 
 ## Exemplar shapes (ai-enablement)
 
-- Full stack templates for assistant rules live in `claude.md/<id>/CLAUDE.md`; this skill’s **onboarding** section can align in tone, but it should still reflect **this** project’s real paths and scripts.
+- Full stack templates for assistant rules live in `templates/<id>/CLAUDE.md`; this skill’s **onboarding** section can align in tone, but it should still reflect **this** project’s real paths and scripts.

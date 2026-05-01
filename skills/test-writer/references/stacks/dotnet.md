@@ -23,4 +23,4 @@
 
 ## Exemplar context
 
-`claude.md/dotnet/CLAUDE.md`
+`templates/dotnet/CLAUDE.md`

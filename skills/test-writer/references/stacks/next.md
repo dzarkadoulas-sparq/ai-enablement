@@ -21,4 +21,4 @@
 
 ## Exemplar context
 
-`claude.md/next/CLAUDE.md`
+`templates/next/CLAUDE.md`

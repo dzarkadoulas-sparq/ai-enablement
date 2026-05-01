@@ -33,4 +33,4 @@
 
 ## Exemplar (ai-enablement)
 
-`claude.md/java-springboot/CLAUDE.md`
+`templates/java-springboot/CLAUDE.md`

@@ -22,4 +22,4 @@
 
 ## Exemplar context
 
-`claude.md/angular/CLAUDE.md`
+`templates/angular/CLAUDE.md`

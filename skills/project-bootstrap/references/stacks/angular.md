@@ -33,4 +33,4 @@
 
 ## Exemplar (ai-enablement)
 
-`claude.md/angular/CLAUDE.md`
+`templates/angular/CLAUDE.md`

@@ -53,7 +53,7 @@ Deliver a **prioritized report** (e.g. Critical / High / Medium / Low) with **fi
 
 ## Exemplar repo (ai-enablement)
 
-Stack-specific checks often align with **`claude.md/<id>/CLAUDE.md`** (Security sections) and **`commands/<id>/security-scan.md`** if present.
+Stack-specific checks often align with **`templates/<id>/CLAUDE.md`** (Security sections) and **`commands/<id>/security-scan.md`** if present.
 
 ## Anti-patterns
 

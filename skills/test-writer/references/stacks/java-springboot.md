@@ -22,4 +22,4 @@
 
 ## Exemplar context
 
-`claude.md/java-springboot/CLAUDE.md`
+`templates/java-springboot/CLAUDE.md`

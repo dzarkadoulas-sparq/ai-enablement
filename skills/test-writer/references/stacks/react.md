@@ -12,7 +12,7 @@
 
 ## Commands (from manifests — do not invent)
 
-- Unit + coverage: typically `pnpm test --coverage` (see `claude.md/react/CLAUDE.md` / `package.json`).
+- Unit + coverage: typically `pnpm test --coverage` (see `templates/react/CLAUDE.md` / `package.json`).
 - A11y: `pnpm test:a11y` when adding UI.
 
 ## Focus for this stack
@@ -22,4 +22,4 @@
 
 ## Exemplar context
 
-`claude.md/react/CLAUDE.md` — test commands and accessibility expectations.
+`templates/react/CLAUDE.md` — test commands and accessibility expectations.

@@ -34,4 +34,4 @@ User navigation: router definition → page/screen component → data hook (e.g.
 
 ## Exemplar (ai-enablement)
 
-`claude.md/react/CLAUDE.md` — use as full structural template when working inside this training repo.
+`templates/react/CLAUDE.md` — use as full structural template when working inside this training repo.

@@ -8,18 +8,18 @@ The materials assume you will connect assistants to your toolchain using the **M
 
 ## Repository layout
 
-| Path         | Purpose  |
-| ------------ | ----------------- |
-| `claude.md/` | Template **CLAUDE.md** files per project type: stack-specific rules, commands, and conventions for the assistant. **Cursor** users can reuse the same content as a root **`.cursorrules`** file (see below). |
-| `commands/`  | **Reusable prompts** (markdown) organized by project type, e.g. pre-PR checks, new features, security scans, standup prep, and shipping work (Jira vs Azure DevOps variants). |
+| Path         | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `templates/` | Template **CLAUDE.md** files per project type: stack-specific rules, commands, and conventions for the assistant. **Cursor** users can reuse the same content as a root **`.cursorrules`** file (see below).                                                                                                                                                                                                                                                                                                                                                                                             |
+| `commands/`  | **Reusable prompts** (markdown) organized by project type, e.g. pre-PR checks, new features, security scans, standup prep, and shipping work (Jira vs Azure DevOps variants).                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `skills/`    | **Claude / Cursor skills** — start with the tutorial [`skills/README.md`](skills/README.md) (triggers, usage, how skills combine, and how to extend the baseline). **Phase 1–3:** `project-bootstrap`, `pre-pr-review`, `test-writer`, `security-audit`, `git-cleanup`, `conflict-resolver`, `impact-analysis`, `api-test-suite`, `refactor-guide`, `ship-it`. **Phase 4 (specialized):** `standup-prep`, `arch-doc-generator`, `debug-with-playwright` — all **13** **recommended** skills are implemented. **Bonus:** `prep-sprint-work` (Modules 3, 6, 7), documented in the same `skills/README.md`. |
-| `modules/`   | **Course-style lessons** (prompting, agentic workflows, MCP, Git, testing, refactoring, security). |
+| `modules/`   | **Course-style lessons** (prompting, agentic workflows, MCP, Git, testing, refactoring, security).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 
 ---
 
 ## Project types and languages
 
-Content is aligned with **seven project stacks** (see subfolders under `claude.md/` and `commands/`):
+Content is aligned with **seven project stacks** (see subfolders under `templates/` and `commands/`):
 
 | Folder            | Stack                 | Language / runtime |
 | ----------------- | --------------------- | ------------------ |
@@ -35,9 +35,9 @@ Content is aligned with **seven project stacks** (see subfolders under `claude.m
 
 ---
 
-## Using `claude.md/`
+## Using `templates/`
 
-Each subdirectory contains a **CLAUDE.md** tailored to that stack (for example `claude.md/react/CLAUDE.md`).
+Each subdirectory contains a **CLAUDE.md** tailored to that stack (for example `templates/react/CLAUDE.md`).
 
 **What it is:** “Project intelligence” the assistant should treat as binding: how to install and run the app, test and lint commands, architecture rules (folder layout, state, API style), and common pitfalls.
 
@@ -46,7 +46,7 @@ Each subdirectory contains a **CLAUDE.md** tailored to that stack (for example `
 1. **Copy** the file that best matches your repo (or merge sections into an existing `CLAUDE.md` at the repository root, or under `.claude/CLAUDE.md` if you prefer that layout in Claude Code).
 2. **Edit** paths, package manager, and team-specific rules so they match the real project.
 3. In **Claude Code**, keep `CLAUDE.md` where [Claude Code settings](https://docs.anthropic.com/en/docs/claude-code/settings) expect it (project root is typical).
-4. In **Cursor**, use the **same** template content at the project root in a file named **`.cursorrules`** (for example, copy the matching `claude.md/<stack>/CLAUDE.md` and save it as `.cursorrules`). That file supplies project rules to Cursor’s agent.
+4. In **Cursor**, use the **same** template content at the project root in a file named **`.cursorrules`** (for example, copy the matching `templates/<stack>/CLAUDE.md` and save it as `.cursorrules`). That file supplies project rules to Cursor’s agent.
 
 Referencing a template in documentation or onboarding helps new contributors and keeps assistant behavior consistent across branches.
 
@@ -56,7 +56,7 @@ Referencing a template in documentation or onboarding helps new contributors and
 
 Commands are **markdown prompt recipes**, not executables. Each file describes a workflow in plain steps (shell commands, checks, and what to do when something fails).
 
-**Structure:** One subfolder per project type, mirroring `claude.md/` (e.g. `commands/react/`, `commands/dotnet/`).
+**Structure:** One subfolder per project type, mirroring `templates/` (e.g. `commands/react/`, `commands/dotnet/`).
 
 **Examples of patterns you will see:**
 
@@ -99,21 +99,21 @@ Install and configure servers in the host (Cursor: `mcp.json`; Claude Code: `cla
 
 ### Host documentation (install & configure MCP)
 
-| Product         | Official documentation  |
-| --------------- | --------------------------------------------------------------------- |
-| **Cursor**      | [Model Context Protocol (MCP)](https://cursor.com/docs/mcp) · [MCP integrations](https://cursor.com/help/customization/mcp) (UI: **Settings → Tools & MCP**; project file: `.cursor/mcp.json`) |
+| Product         | Official documentation                                                                                                                                                                                                                                                                                     |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Cursor**      | [Model Context Protocol (MCP)](https://cursor.com/docs/mcp) · [MCP integrations](https://cursor.com/help/customization/mcp) (UI: **Settings → Tools & MCP**; project file: `.cursor/mcp.json`)                                                                                                             |
 | **Claude Code** | [Connect Claude Code to tools via MCP](https://docs.anthropic.com/en/docs/claude-code/mcp/) (also published at [code.claude.com](https://code.claude.com/docs/en/mcp)) · [Claude Code settings](https://docs.anthropic.com/en/docs/claude-code/settings) (MCP in `~/.claude.json` and project `.mcp.json`) |
 
 ### Service-specific references (servers you may add)
 
-| Integration                             | Where to start (official / upstream) |
-| --------------------------------------- | ------------------------------------ |
-| **GitHub**                              | [github/github-mcp-server](https://github.com/github/github-mcp-server) (remote and local options, PAT / OAuth)  |
-| **Playwright (browser automation)**     | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) (see repo README for Cursor / Claude Code examples) |
-| **Jira / Confluence (Atlassian Cloud)** | [Atlassian Rovo MCP Server — use Atlassian Rovo MCP Server](https://support.atlassian.com/rovo/docs/atlassian-remote-mcp-server/) · [Setting up IDEs (desktop clients)](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/setting-up-ides/) (includes Cursor) |
+| Integration                             | Where to start (official / upstream)                                                                                                                                                                                                                                                                                                          |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GitHub**                              | [github/github-mcp-server](https://github.com/github/github-mcp-server) (remote and local options, PAT / OAuth)                                                                                                                                                                                                                               |
+| **Playwright (browser automation)**     | [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) (see repo README for Cursor / Claude Code examples)                                                                                                                                                                                                                   |
+| **Jira / Confluence (Atlassian Cloud)** | [Atlassian Rovo MCP Server — use Atlassian Rovo MCP Server](https://support.atlassian.com/rovo/docs/atlassian-remote-mcp-server/) · [Setting up IDEs (desktop clients)](https://support.atlassian.com/atlassian-rovo-mcp-server/docs/setting-up-ides/) (includes Cursor)                                                                      |
 | **Azure DevOps**                        | [Enable AI assistance with the Azure DevOps MCP Server](https://learn.microsoft.com/azure/devops/mcp-server/mcp-server-overview) · [Set up the remote Azure DevOps MCP Server (preview)](https://learn.microsoft.com/azure/devops/mcp-server/remote-mcp-server) · [microsoft/azure-devops-mcp](https://github.com/microsoft/azure-devops-mcp) |
-| **Slack**                               | [Slack MCP server — API docs](https://api.slack.com/ai/slack-mcp-server) |
-| **Postman**                             | [Postman docs — MCP servers overview](https://learning.postman.com/docs/postman-ai-developer-tools/mcp-servers/overview) · [postmanlabs/postman-mcp-server](https://github.com/postmanlabs/postman-mcp-server) (remote URL, OAuth, and local npm package) |
+| **Slack**                               | [Slack MCP server — API docs](https://api.slack.com/ai/slack-mcp-server)                                                                                                                                                                                                                                                                      |
+| **Postman**                             | [Postman docs — MCP servers overview](https://learning.postman.com/docs/postman-ai-developer-tools/mcp-servers/overview) · [postmanlabs/postman-mcp-server](https://github.com/postmanlabs/postman-mcp-server) (remote URL, OAuth, and local npm package)                                                                                     |
 
 Exact `mcp.json` / `claude mcp add` snippets change as vendors update servers; use the links above for current transport (stdio vs HTTP), OAuth, and required environment variables.
 

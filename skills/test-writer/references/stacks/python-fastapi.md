@@ -22,4 +22,4 @@
 
 ## Exemplar context
 
-`claude.md/python-fastapi/CLAUDE.md`
+`templates/python-fastapi/CLAUDE.md`

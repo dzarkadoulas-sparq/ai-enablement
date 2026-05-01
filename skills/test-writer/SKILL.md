@@ -22,8 +22,8 @@ Add **correct, maintainable** tests that match the repo’s **framework, folder 
    - `references/edge-case-catalog.md` — boundaries and domain edge cases
    - `references/anti-patterns.md` — what not to test, brittle patterns
 
-| `<id>` | Typical test stack | Also read (language / UI) |
-| ------ | ------------------ | ------------------------- |
+| `<id>`            | Typical test stack                                        | Also read (language / UI)                                         |
+| ----------------- | --------------------------------------------------------- | ----------------------------------------------------------------- |
 | `react`           | Vitest + RTL + (msw)                                      | `references/react-typescript.md`                                  |
 | `next`            | Vitest + RTL; RSC/Server Actions                          | `references/react-typescript.md` + `references/nextjs-testing.md` |
 | `angular`         | Karma/Jest + TestBed (+ Playwright e2e elsewhere)         | `references/angular-testing.md`                                   |
@@ -50,7 +50,7 @@ Add **correct, maintainable** tests that match the repo’s **framework, folder 
 
 ## Exemplar repo (ai-enablement)
 
-Stack-specific commands and colocation often mirror **`claude.md/<id>/CLAUDE.md`** and **`commands/<id>/pre-pr.md`**.
+Stack-specific commands and colocation often mirror **`templates/<id>/CLAUDE.md`** and **`commands/<id>/pre-pr.md`**.
 
 ## Anti-patterns
 

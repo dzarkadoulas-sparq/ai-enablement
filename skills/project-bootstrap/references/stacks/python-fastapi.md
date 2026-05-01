@@ -32,4 +32,4 @@ OpenAPI: route decorator â†’ dependency-injected `Depends` (auth, DB session) â†
 
 ## Exemplar (ai-enablement)
 
-`claude.md/python-fastapi/CLAUDE.md`
+`templates/python-fastapi/CLAUDE.md`

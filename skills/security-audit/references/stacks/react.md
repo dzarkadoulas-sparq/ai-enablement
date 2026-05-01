@@ -16,4 +16,4 @@
 
 ## Security sections in CLAUDE
 
-- Cross-check new code against **Security** rules in `claude.md/react/CLAUDE.md` (XSS, tokens, env, CSP).
+- Cross-check new code against **Security** rules in `templates/react/CLAUDE.md` (XSS, tokens, env, CSP).
