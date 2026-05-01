@@ -135,6 +135,12 @@ The `modules/` directory contains topic guides (e.g. effective prompting, agenti
 
 ---
 
+## Contributing
+
+Before opening a pull request, run the [`pre-pr-review`](skills/pre-pr-review/) skill against your changes — it covers quality gates and commit-message checks. Use a GitHub issue to track any broken links or content drift you find but cannot fix immediately.
+
+---
+
 ## License and usage
 
 This project is created by Dimitris Zarkadoulas and licensed under the MIT License. Co-authored with Claude by Anthropic and with Cursor — see DISCLAIMER.md for details on AI-generated content, warranty, and support.
